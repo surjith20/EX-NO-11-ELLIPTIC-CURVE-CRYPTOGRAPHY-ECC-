@@ -1,11 +1,7 @@
 # EX-NO-11-ELLIPTIC-CURVE-CRYPTOGRAPHY-ECC
-
 ## Aim:
 To Implement ELLIPTIC CURVE CRYPTOGRAPHY(ECC)
-
-
 ## ALGORITHM:
-
 1. Elliptic Curve Cryptography (ECC) is a public-key cryptography technique based on the algebraic structure of elliptic curves over finite fields.
 
 2. Initialization:
@@ -21,7 +17,6 @@ To Implement ELLIPTIC CURVE CRYPTOGRAPHY(ECC)
    - Decryption: The recipient uses their private key to decode the message and retrieve the original plaintext.
 
 5. Security: ECC’s security relies on the Elliptic Curve Discrete Logarithm Problem (ECDLP), making it highly secure with shorter key lengths compared to traditional methods like RSA.
-
 ## Program:
 ```
 #include <stdio.h>
@@ -32,11 +27,9 @@ typedef struct {
     int y;
     int is_infinity;
 } Point;
-
 const int a = 2;
 const int b = 3;
 const int p = 17;
-
 int mod_inverse(int k, int p) {
     k = k % p;
     for (int x = 1; x < p; x++) {
@@ -46,12 +39,10 @@ int mod_inverse(int k, int p) {
     }
     return -1;
 }
-
 int mod(int value, int mod) {
     int result = value % mod;
     return (result < 0) ? result + mod : result;
 }
-
 Point point_addition(Point P, Point Q) {
     if (P.is_infinity) return Q;
     if (Q.is_infinity) return P;
@@ -95,4 +86,4 @@ int main() {
 ## Output:
 ![ex 11](https://github.com/user-attachments/assets/afa59e45-ca28-43bd-a875-92dccc5b07ab)
 ## Result:
-The program is executed successfully
+The program is executed successfully.
